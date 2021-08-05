@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('github/users/{users_name?}',[\App\Http\Controllers\Api\GithubController::class,'users']);
