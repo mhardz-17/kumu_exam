@@ -18,6 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script>
+        SITE_URL = "{{ url('/') }}"
+    </script>
 </head>
 <body>
     <div id="app">
@@ -78,6 +81,8 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        @stack('js')
     </div>
 </body>
 </html>

@@ -24,4 +24,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => 'auth'], function () {
     Route::get('hamming-distance', [App\Http\Controllers\HammingDistanceController::class, 'index']);
     Route::post('hamming-distance', [App\Http\Controllers\HammingDistanceController::class, 'compute']);
+
+    Route::get('github-user-tester',[\App\Http\Controllers\GithubUserTesterController::class,'index']);
 });

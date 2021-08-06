@@ -22,10 +22,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
                 <div class="card-body">
-                    <a href="{{ url('/hamming-distance') }}">Hamming Distance</a>
+                    <a href="{{ url('/github-user-tester') }}">Github User Tester</a> <br>
+                    <a href="{{ url('/hamming-distance') }}">Click here to Hamming Distance</a>
                 </div>
             </div>
         </div>

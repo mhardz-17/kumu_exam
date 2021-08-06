@@ -36,3 +36,7 @@ You can access the endpoint with the given URL
 Example
 
 ```http://localhost:8000/api/github/users/mhardz-17,test1,test2,test3,test5```
+
+Or just use the UI tester
+
+``` http://localhost:8000/github-user-tester ```
