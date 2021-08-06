@@ -13,7 +13,7 @@
                             <div class="form-group">
                                 <label for="xVal">Users</label>
                                 <input type="text" class="form-control" id="users" name="users" value="" aria-describedby="xVal" placeholder="Users seperated by comma">
-
+                                <small class="help-block">Username seperated by comma(ex. user1,user2)</small>
                             </div>
                             <div class="form-group">
                                 <label for="">API</label>

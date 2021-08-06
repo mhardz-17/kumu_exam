@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('github/users/{users_name?}',[\App\Http\Controllers\Api\GithubController::class,'users']);
+Route::get('sanctum-login',[\App\Http\Controllers\Auth\LoginController::class,'sanctumLogin']);

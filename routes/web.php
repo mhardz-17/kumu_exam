@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::get('hamming-distance', [App\Http\Controllers\HammingDistanceController::class, 'index']);
     Route::post('hamming-distance', [App\Http\Controllers\HammingDistanceController::class, 'compute']);
 

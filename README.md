@@ -40,3 +40,22 @@ Example
 Or just use the UI tester
 
 ``` http://localhost:8000/github-user-tester ```
+
+if you want to test it for like mobile app API, take this step.
+
+1. Login on api, if it was successful a token will be returned to you.
+   ``` 
+    - http://localhost:8000/api/sanctum-login
+     params:
+       email: your registered email
+       password:
+       device_name: any name just for testing
+   
+   ```
+2. Using postman, make a request with the below url but be sure to put the token given above as Authorization header
+   
+  ```http://localhost:8000/api/github/users/mhardz-17,test1,test2,test3,test5```
+
+   | Key           | Value         |
+   | ------------- | ------------- |
+   | Authorization | Bearer ```<the token given on login>```  |
