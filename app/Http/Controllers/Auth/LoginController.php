@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Hash;
@@ -40,7 +41,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest')->except(['logout','sanctumLogout']);
     }
 
     public function sanctumLogin(Request $request)
@@ -67,5 +68,11 @@ class LoginController extends Controller
 
         //use the returned token as bearer token for authentication
         return $this->buildJson(['token' => $token]);
+    }
+
+    public function sanctumLogout(Request $request)
+    {
+        $request->user()->currentAccessToken()->delete();
+        return $this->buildJson(['logout' => true]);
     }
 }
