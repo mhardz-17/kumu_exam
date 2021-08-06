@@ -29,7 +29,7 @@ This include Git,Composer, any software that run apache php(ex. WAMP, Laragon or
 
 ##How to use the API Endpoint
 
-You can access the endpoint with the given URL
+You can access the endpoint with the given URL, but you need to use the UI tester or login via sanctum and use Bearer authentication.
 
 ``` http://<hostname>/api/github/users/<comma seperated usernames> ```
 
